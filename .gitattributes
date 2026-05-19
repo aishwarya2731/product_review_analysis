@@ -1,0 +1,23 @@
+import streamlit as st
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+st.title("Sentiment Analysis App")
+
+df = pd.read_csv("reviews.csv")
+
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(df['review'])
+y = df['sentiment']
+
+model = MultinomialNB()
+model.fit(X, y)
+
+review = st.text_input("Enter your review:")
+
+if st.button("Predict"):
+    vec = vectorizer.transform([review])
+    result = model.predict(vec)
+    st.write("Predicted Sentiment:", result[0])# Auto detect text files and perform LF normalization
+* text=auto

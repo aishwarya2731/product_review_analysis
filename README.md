@@ -1,2 +1,13 @@
-# product_review_analysis
-An intelligent sentiment analysis system that processes product reviews using NLP and machine learning. It applies preprocessing and Naive Bayes to classify reviews as positive or negative, and provides results through a simple Streamlit-based user interface for easy interaction.
+review,sentiment
+"This product is very good",Positive
+"Worst quality ever",Negative
+"Average item",Neutral
+"Excellent performance",Positive
+"Not worth the money",Negative
+"Very happy with this product",Positive
+"Bad experience",Negative
+"Okay product",Neutral
+"Worst quality, I hate it",Negative
+"It is okay, not great",Neutral
+"Excellent and worth the money",Positive
+"Bad experience, not recommended",Negative
